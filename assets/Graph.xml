@@ -1,0 +1,466 @@
+<?xml version="1.0"?>
+
+<GameMap>
+
+   <!-- Ni Hao Intro -->
+   <scenario id="0">
+      <clipName>P0</clipName>
+      <exclusiveSelection>1</exclusiveSelection>
+      <choiceBtnPosX> 0.1 </choiceBtnPosX>
+      <choiceBtnPosY> 1 </choiceBtnPosY>
+      <choiceBtnGap> 200 </choiceBtnGap>
+      <choice>
+         <outcome>1</outcome>
+         <genericValue>-1</genericValue>
+      </choice>
+   </scenario>
+
+   <!-- Problem 1, picking food at canteen -->
+   <scenario id="1">
+      <clipName>P1</clipName>
+      <exclusiveSelection>0</exclusiveSelection>
+      <choiceBtnPosX> 0.1 </choiceBtnPosX>
+      <choiceBtnPosY> 0.78 </choiceBtnPosY>
+      <choiceBtnGap> 200 </choiceBtnGap>
+      <outcomeThreshold value ="2"> 3 </outcomeThreshold>
+      <outcomeThreshold value ="3"> 5 </outcomeThreshold>
+      <outcomeThreshold value ="4"> 99999 </outcomeThreshold>
+
+      <!-- Rice Bowl -->
+      <choice>
+         <genericValue>3</genericValue>
+         <cost>1.5</cost>
+      </choice>
+
+      <!-- Cookies -->
+      <choice>
+         <genericValue>1</genericValue>
+         <cost>.5</cost>
+      </choice>
+
+      <!-- cupcake -->
+      <choice>
+         <genericValue>2</genericValue>
+         <cost>.8</cost>
+      </choice>
+
+      <!-- Burger -->
+      <choice>
+         <genericValue>3</genericValue>
+         <cost>1.2</cost>
+      </choice>
+
+      <!-- Chicken Drumstick -->
+      <choice>
+         <genericValue>2</genericValue>
+         <cost>0.8</cost>
+      </choice>
+
+      <!-- Milk -->
+      <choice>
+         <genericValue>1</genericValue>
+         <cost>.6</cost>
+      </choice>
+
+   </scenario>
+
+   <!-- Problem 1 Result, Too Little Food -->
+   <scenario id="2">
+      <clipName>P1A</clipName>
+      <exclusiveSelection>1</exclusiveSelection>
+      <happy>-1</happy>
+      <choice>
+         <outcome>5</outcome>
+      </choice>
+   </scenario>
+
+   <!-- Problem 1 Result, Perfect -->
+   <scenario id="3">
+      <clipName>P1B</clipName>
+      <exclusiveSelection>1</exclusiveSelection>
+      <happy>3</happy>
+      <choice>
+         <outcome>5</outcome>
+      </choice>
+   </scenario>
+
+   <!-- Problem 1 Result, Overbuy -->
+   <scenario id="4">
+      <clipName>P1C</clipName>
+      <exclusiveSelection>1</exclusiveSelection>
+      <happy>-2</happy>
+      <choice>
+         <outcome>5</outcome>
+      </choice>
+   </scenario>
+
+   <!-- Problem 2, stationery shop -->
+   <scenario id="5">
+      <clipName>P2</clipName>
+      <exclusiveSelection>0</exclusiveSelection>
+      <choiceBtnPosX> 0.12 </choiceBtnPosX>
+      <choiceBtnPosY> 0.78 </choiceBtnPosY>
+      <choiceBtnGap> 230 </choiceBtnGap>
+      <outcomeThreshold value ="6"> 3 </outcomeThreshold>
+      <outcomeThreshold value ="7"> 99999 </outcomeThreshold>
+
+      <!-- Mechanical Pencil -->
+      <choice>
+         <genericValue>99</genericValue>
+         <cost>1.5</cost>
+      </choice>
+
+      <!-- Pencil -->
+      <choice>
+         <genericValue>1</genericValue>
+         <cost>.8</cost>
+      </choice>
+
+      <!-- Eraser -->
+      <choice>
+         <genericValue>99</genericValue>
+         <cost>.5</cost>
+      </choice>
+
+      <!-- Book -->
+      <choice>
+         <genericValue>99</genericValue>
+         <cost>1.2</cost>
+      </choice>
+
+      <!-- Ruler -->
+      <choice>
+         <genericValue>1</genericValue>
+         <cost>0.5</cost>
+      </choice>
+   </scenario>
+
+   <!-- Problem 2 Result, correct stationery -->
+   <scenario id="6">
+      <clipName>P2A</clipName>
+      <exclusiveSelection>1</exclusiveSelection>
+      <happy>3</happy>
+      <choice>
+         <outcome>8</outcome>
+      </choice>
+   </scenario>
+
+   <!-- Problem 2 Result, wrong stationery -->
+   <scenario id="7">
+      <clipName>P2B</clipName>
+      <exclusiveSelection>1</exclusiveSelection>
+      <happy>-2</happy>
+      <choice>
+         <outcome>8</outcome>
+      </choice>
+   </scenario>
+
+    <!-- Problem 3, Birthday -->
+   <scenario id="8">
+      <clipName>P3</clipName>
+      <exclusiveSelection>1</exclusiveSelection>
+      <choiceBtnPosX> 0.158 </choiceBtnPosX>
+      <choiceBtnPosY> 0.59 </choiceBtnPosY>
+      <choiceBtnGap> 300 </choiceBtnGap>
+
+      <!-- Don't go -->
+      <choice>
+         <outcome>9</outcome>
+      </choice>
+
+      <!-- Draw a bear card -->
+      <choice>
+         <outcome>10</outcome>
+      </choice>
+
+      <!-- $20 bear -->
+      <choice>
+         <outcome>11</outcome>
+      </choice>
+
+      <!-- Share gift with friend -->
+      <choice>
+         <outcome>12</outcome>
+      </choice>
+   </scenario>
+
+   <!-- Problem 3 Result, No go, Friend unhappy -->
+   <scenario id="9">
+      <clipName>P3A</clipName>
+      <exclusiveSelection>1</exclusiveSelection>
+      <happy>-2</happy>
+      <choice>
+         <outcome>13</outcome>
+      </choice>
+   </scenario>
+
+   <!-- Problem 3 Result, Friend likes card -->
+   <scenario id="10">
+      <clipName>P3B</clipName>
+      <exclusiveSelection>1</exclusiveSelection>
+      <happy>3</happy>
+      <choice>
+         <outcome>13</outcome>
+      </choice>
+   </scenario>
+
+   <!-- Problem 3 Result, Mummy say expensive present -->
+   <scenario id="11">
+      <clipName>P3C</clipName>
+      <exclusiveSelection>1</exclusiveSelection>
+      <happy>-2</happy>
+      <money>-20</money>
+      <choice>
+         <outcome>13</outcome>
+      </choice>
+   </scenario>
+
+   <!-- Problem 3 Result, Friend likes the shared present -->
+   <scenario id="12">
+      <clipName>P3D</clipName>
+      <exclusiveSelection>1</exclusiveSelection>
+      <happy>3</happy>
+      <choice>
+         <outcome>13</outcome>
+      </choice>
+   </scenario>
+
+   <!-- Problem 4, Bag Sale -->
+   <scenario id="13">
+      <clipName>P4</clipName>
+      <exclusiveSelection>1</exclusiveSelection>
+      <choiceBtnPosX> 0.25 </choiceBtnPosX>
+      <choiceBtnPosY> 0.8 </choiceBtnPosY>
+      <choiceBtnGap> 320 </choiceBtnGap>
+
+      <!-- Xiao li's bag -->
+      <choice>
+         <outcome>14</outcome>
+      </choice>
+
+      <!-- Shop's bag -->
+      <choice>
+         <outcome>15</outcome>
+      </choice>
+
+      <!-- bag + water bottle -->
+      <choice>
+         <outcome>16</outcome>
+      </choice>
+
+   </scenario>
+
+   <!-- Problem 4 Result, Daddy say you don't need that bag -->
+   <scenario id="14">
+      <clipName>P4A</clipName>
+      <exclusiveSelection>1</exclusiveSelection>
+      <happy>-2</happy>
+      <choice>
+         <outcome>17</outcome>
+      </choice>
+   </scenario>
+
+   <!-- Problem 4 Result, This is what I need -->
+   <scenario id="15">
+      <clipName>P4B</clipName>
+      <exclusiveSelection>1</exclusiveSelection>
+      <happy>3</happy>
+      <choice>
+         <outcome>17</outcome>
+      </choice>
+   </scenario>
+
+   <!-- Problem 4 Result, sister is happy -->
+   <scenario id="16">
+      <clipName>P4C</clipName>
+      <exclusiveSelection>1</exclusiveSelection>
+      <happy>4</happy>
+      <choice>
+         <outcome>17</outcome>
+      </choice>
+   </scenario>
+
+  <!-- Problem 5, Tuck shop but broke -->
+   <scenario id="17">
+      <clipName>P5</clipName>
+      <exclusiveSelection>1</exclusiveSelection>
+      <choiceBtnPosX> 0.22 </choiceBtnPosX>
+      <choiceBtnPosY> 0.8 </choiceBtnPosY>
+      <choiceBtnGap> 330 </choiceBtnGap>
+
+      <!-- Borrow from Kang Kang -->
+      <choice>
+         <outcome>18</outcome>
+      </choice>
+
+      <!-- Buy Next Time -->
+      <choice>
+         <outcome>19</outcome>
+      </choice>
+
+      <!-- Buy a Cheaper one another time -->
+      <choice>
+         <outcome>20</outcome>
+      </choice>
+
+   </scenario>
+
+   <!-- Problem 5 Result, Kang Kang angry no return-->
+   <scenario id="18">
+      <clipName>P5A</clipName>
+      <exclusiveSelection>1</exclusiveSelection>
+      <happy>-2</happy>
+      <choice>
+         <outcome>21</outcome>
+      </choice>
+   </scenario>
+
+   <!-- Problem 5 Result, Buy again next time-->
+   <scenario id="19">
+      <clipName>P5B</clipName>
+      <exclusiveSelection>1</exclusiveSelection>
+      <happy>3</happy>
+      <choice>
+         <outcome>21</outcome>
+      </choice>
+   </scenario>
+
+   <!-- Problem 5 Result, Buy cheaper book-->
+   <scenario id="20">
+      <clipName>P5C</clipName>
+      <exclusiveSelection>1</exclusiveSelection>
+      <happy>4</happy>
+      <choice>
+         <outcome>21</outcome>
+      </choice>
+   </scenario>
+
+
+    <!-- Problem 6, Pick up wallet -->
+   <scenario id="21">
+      <clipName>P6</clipName>
+      <exclusiveSelection>1</exclusiveSelection>
+      <choiceBtnPosX> 0.20 </choiceBtnPosX>
+      <choiceBtnPosY> 0.58 </choiceBtnPosY>
+      <choiceBtnGap> 390 </choiceBtnGap>
+
+      <!-- return wallet and $$ to mummy -->
+      <choice>
+         <outcome>22</outcome>
+      </choice>
+
+      <!-- Keep $80 -->
+      <choice>
+         <outcome>23</outcome>
+      </choice>
+
+      <!-- Keep $10, return rest to mummy -->
+      <choice>
+         <outcome>24</outcome>
+      </choice>
+
+   </scenario>
+
+   <!-- Problem 6 Result Owner Reward-->
+   <scenario id="22">
+      <clipName>P6A</clipName>
+      <exclusiveSelection>1</exclusiveSelection>
+      <happy>3</happy>
+      <money>10</money>
+      <choice>
+         <outcome>25</outcome>
+      </choice>
+   </scenario>
+
+   <!-- Problem 6 Result Mummy found out about the $80-->
+   <scenario id="23">
+      <clipName>P6B</clipName>
+      <exclusiveSelection>1</exclusiveSelection>
+      <happy>-3</happy>
+      <choice>
+         <outcome>25</outcome>
+      </choice>
+   </scenario>
+
+   <!-- Problem 6 Result,Father saw you taking wallet-->
+   <scenario id="24">
+      <clipName>P6C</clipName>
+      <exclusiveSelection>1</exclusiveSelection>
+      <happy>-3</happy>
+      <choice>
+         <outcome>25</outcome>
+      </choice>
+   </scenario>
+
+
+
+
+
+   <!-- Problem 7,Charity -->
+   <scenario id="25">
+      <clipName>P7</clipName>
+      <exclusiveSelection>1</exclusiveSelection>
+      <choiceBtnPosX> 0.20 </choiceBtnPosX>
+      <choiceBtnPosY> 0.58 </choiceBtnPosY>
+      <choiceBtnGap> 390 </choiceBtnGap>
+      <money>20</money>
+
+      <!-- Save All -->
+      <choice>
+         <outcome>26</outcome>
+      </choice>
+
+      <!--Donate $2 -->
+      <choice>
+         <outcome>27</outcome>
+      </choice>
+
+      <!-- Donate All -->
+      <choice>
+         <outcome>28</outcome>
+      </choice>
+
+   </scenario>
+
+   <!-- Problem 7 Result Charity not limited to monetary-->
+   <scenario id="26">
+      <clipName>P7A</clipName>
+      <exclusiveSelection>1</exclusiveSelection>
+      <happy>3</happy>
+      <choice>
+         <outcome>29</outcome>
+      </choice>
+   </scenario>
+
+   <!-- Problem 7 Result Good Job-->
+   <scenario id="27">
+      <clipName>P7B</clipName>
+      <exclusiveSelection>1</exclusiveSelection>
+      <happy>3</happy>
+      <money>-2</money>
+      <choice>
+         <outcome>29</outcome>
+      </choice>
+   </scenario>
+
+   <!-- Problem 7 Result maybe donate too much-->
+   <scenario id="28">
+      <clipName>P7C</clipName>
+      <money>-20</money>
+      <exclusiveSelection>1</exclusiveSelection>
+      <choice>
+         <outcome>29</outcome>
+      </choice>
+   </scenario>
+
+
+<!-- Summary -->
+   <scenario id="29">
+      <clipName>Summary</clipName>
+      <exclusiveSelection>1</exclusiveSelection>
+      <choiceBtnPosX> 0.20 </choiceBtnPosX>
+      <choiceBtnPosY> 0.58 </choiceBtnPosY>
+      <choiceBtnGap> 390 </choiceBtnGap>
+   </scenario>
+
+</GameMap>
